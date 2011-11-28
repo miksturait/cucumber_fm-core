@@ -1,3 +1,4 @@
+# encoding: utf-8
 module CucumberFM
   module FeatureElement
     class Background < Struct.new(:feature, :raw)
