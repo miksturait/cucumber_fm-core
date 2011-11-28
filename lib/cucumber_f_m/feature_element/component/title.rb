@@ -14,7 +14,6 @@ module CucumberFM
         end
 
         def fetch_title
-          p raw
           if tag_line = /^\s*[^:\r\n#]+:\s.*$/.match(raw)
             tag_line[0].gsub(/^[^:]*:/,'').strip
           else
