@@ -10,7 +10,7 @@ module CucumberFM
         private
 
         def title_line_pattern
-          /^\s*[A-Z][a-z]+:\s.*$/
+          /^\s*[^:\r\n#]+:\s.*$/
         end
 
         def fetch_title

@@ -1,7 +1,11 @@
+# encoding: utf-8
 module CucumberFM
   module FeatureElement
     class Scenario < Struct.new(:feature, :raw)
-      PATTERN = /((^.*#+.*\n)+\n?)?(^.*@+.*\n)?^[ \t]*Scenario:.*\n?(^.*\S+.*\n?)*/
+
+      I18N_WORDS = "Scenario:|Scenariusz:"
+
+      PATTERN = /((^.*#+.*\n)+\n?)?(^.*@+.*\n)?^[ \t]*(#{I18N_WORDS}).*\n?(^.*\S+.*\n?)*/
 
       include CucumberFM::FeatureElement::Component::Tags
       include CucumberFM::FeatureElement::Component::Title
